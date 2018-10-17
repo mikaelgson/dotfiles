@@ -147,7 +147,6 @@ module.exports = {
             activityColor: 'salmon',
             tabIconsColored: true,
             closeAlign: 'right',
-            border: true
         }
     },
 
@@ -160,9 +159,9 @@ module.exports = {
     plugins: [
         'hyper-pane',
         'hyper-search',
-        'hyper-dracula',
         "hyperfull",
-        "hyper-tabs-enhanced"
+        "hyper-tabs-enhanced",
+        "hyper-snazzy"
     ],
 
     // in development, you can create a directory under
