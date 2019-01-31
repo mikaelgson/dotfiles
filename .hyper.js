@@ -9,7 +9,7 @@ module.exports = {
         updateChannel: 'stable',
 
         // default font size in pixels for all tabs
-        fontSize: 14,
+        fontSize: 15,
 
         // font family with optional fallbacks
         fontFamily: 'Meslo LG S for Powerline, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
@@ -53,15 +53,15 @@ module.exports = {
 
         // if you're using a Linux setup which show native menus, set to false
         // default: `true` on Linux, `true` on Windows, ignored on macOS
-        showHamburgerMenu: true,
+        showHamburgerMenu: false,
 
         // set to `false` (without backticks and without quotes) if you want to hide the minimize, maximize and close buttons
         // additionally, set to `'left'` if you want them on the left, like in Ubuntu
         // default: `true` (without backticks and without quotes) on Windows and Linux, ignored on macOS
-        showWindowControls: false,
+        showWindowControls: true,
 
         // custom padding (CSS format, i.e.: `top right bottom left`)
-        padding: '0 15px 0 15px',
+        padding: '15px',
 
         // the full list. if you're going to provide the full color palette,
         // including the 6 x 6 color cubes and the grayscale map, just provide
@@ -97,7 +97,7 @@ module.exports = {
         //
         // PowerShell on Windows
         // - Example: `C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe`
-        shell: 'C:\\Program Files\\Git\\bin\\bash.exe',
+        shell: '',
 
         // for setting shell arguments (i.e. for using interactive shellArgs: `['-i']`)
         // by default `['--login']` will be used
@@ -105,7 +105,6 @@ module.exports = {
 
         // for environment variables
         env: {
-            TERM: 'msys'
         },
 
         // set to `false` for no bell
@@ -129,24 +128,24 @@ module.exports = {
         paneNavigation: {
             hotkeys: {
                 navigation: {
-                    up: 'ctrl+alt+up',
-                    down: 'ctrl+alt+down',
-                    left: 'ctrl+alt+left',
-                    right: 'ctrl+alt+right'
+                    up: 'cmd+alt+up',
+                    down: 'cmd+alt+down',
+                    left: 'cmd+alt+left',
+                    right: 'cmd+alt+right'
                 },
-                jump_prefix: 'ctrl', // completed with 1-9 digits
+                jump_prefix: 'cmd', // completed with 1-9 digits
                 permutation_modifier: 'shift', // Added to jump and navigation hotkeys for pane permutation
                 maximize: 'meta+enter'
             },
             showIndicators: false, // Show pane number
             focusOnMouseHover: false,
-            inactivePaneOpacity: 0.5 // Set to 1 to disable inactive panes dimming
+            inactivePaneOpacity: 0.8// Set to 1 to disable inactive panes dimming
         },
 
         hyperTabs: {
             activityColor: 'salmon',
             tabIconsColored: true,
-            closeAlign: 'right',
+            closeAlign: 'right'
         }
     },
 
@@ -159,9 +158,9 @@ module.exports = {
     plugins: [
         'hyper-pane',
         'hyper-search',
-        "hyperfull",
-        "hyper-tabs-enhanced",
-        "hyper-snazzy"
+        // 'hyperfull',
+        'hyper-tabs-enhanced',
+        'hyper-snazzy'
     ],
 
     // in development, you can create a directory under
@@ -170,6 +169,7 @@ module.exports = {
     localPlugins: [],
 
     keymaps: {
-        'Ctrl+T': 'new-tab' },
+        'Ctrl+T': 'new-tab'
+    }
 
 };
